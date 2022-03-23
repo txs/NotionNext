@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import CONFIG_HEXO from '../config_hexo'
+import CONFIG_ANDYSPRO from '../config_andyspro'
 
 /**
  * 上一篇，下一篇文章
@@ -7,7 +7,7 @@ import CONFIG_HEXO from '../config_hexo'
  * @returns
  */
 export default function ArticleAdjacent ({ prev, next }) {
-  if (!prev || !next || !CONFIG_HEXO.ARTICLE_ADJACENT) {
+  if (!prev || !next || !CONFIG_ANDYSPRO.ARTICLE_ADJACENT) {
     return <></>
   }
   return <section className='text-gray-800 items-center text-xs md:text-sm flex justify-between m-1 '>

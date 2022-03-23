@@ -7,7 +7,7 @@ import Collapse from './Collapse'
 import Logo from './Logo'
 import SearchDrawer from './SearchDrawer'
 import TagGroups from './TagGroups'
-import CONFIG_HEXO from '../config_hexo'
+import CONFIG_ANDYSPRO from '../config_andyspro'
 import MenuButtonGroupTop from './MenuButtonGroupTop'
 import MenuList from './MenuList'
 
@@ -40,12 +40,12 @@ const TopNav = (props) => {
 
   // 监听滚动
   useEffect(() => {
-    if (CONFIG_HEXO.NAV_TYPE === 'autoCollapse') {
+    if (CONFIG_ANDYSPRO.NAV_TYPE === 'autoCollapse') {
       // scrollTrigger()
       window.addEventListener('scroll', scrollTrigger)
     }
     return () => {
-      CONFIG_HEXO.NAV_TYPE === 'autoCollapse' && window.removeEventListener('scroll', scrollTrigger)
+      CONFIG_ANDYSPRO.NAV_TYPE === 'autoCollapse' && window.removeEventListener('scroll', scrollTrigger)
     }
   }, [])
 
@@ -91,7 +91,7 @@ const TopNav = (props) => {
     <SearchDrawer cRef={searchDrawer} slot={searchDrawerSlot}/>
 
     {/* 导航栏 */}
-    <div id='sticky-nav' className={`${CONFIG_HEXO.NAV_TYPE !== 'normal' ? 'fixed bg-white' : ' bg-none -mb-10'} animate__animated animate__fadeIn dark:bg-black dark:bg-opacity-50 dark:text-gray-200 bg-opacity-80 text-black w-full top-0 z-20 transform duration-200 font-sans`}>
+    <div id='sticky-nav' className={`${CONFIG_ANDYSPRO.NAV_TYPE !== 'normal' ? 'fixed bg-white' : ' bg-none -mb-10'} animate__animated animate__fadeIn dark:bg-black dark:bg-opacity-50 dark:text-gray-200 bg-opacity-80 text-black w-full top-0 z-20 transform duration-200 font-sans`}>
       <div className='w-full flex justify-between items-center px-4 py-4 shadow'>
         <div className='flex'>
          <Logo/>

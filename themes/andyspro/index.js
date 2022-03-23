@@ -1,4 +1,4 @@
-import CONFIG_HEXO from './config_hexo'
+import CONFIG_ANDYSPRO from './config_andyspro'
 import { LayoutIndex } from './LayoutIndex'
 import { LayoutSearch } from './LayoutSearch'
 import { LayoutArchive } from './LayoutArchive'
@@ -11,7 +11,7 @@ import { LayoutTag } from './LayoutTag'
 import { LayoutTagIndex } from './LayoutTagIndex'
 
 export {
-  CONFIG_HEXO as THEME_CONFIG,
+  CONFIG_ANDYSPRO as THEME_CONFIG,
   LayoutIndex,
   LayoutSearch,
   LayoutArchive,

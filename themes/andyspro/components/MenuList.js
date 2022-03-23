@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useGlobal } from '@/lib/global'
-import CONFIG_HEXO from '../config_hexo'
+import CONFIG_ANDYSPRO from '../config_andyspro'
 
 const MenuList = (props) => {
   const { postCount, customNav } = props
@@ -12,10 +12,10 @@ const MenuList = (props) => {
 
   let links = [
     { icon: 'fas fa-home', name: locale.NAV.INDEX, to: '/' || '/', show: true },
-    { icon: 'fas fa-th', name: locale.COMMON.CATEGORY, to: '/category', show: CONFIG_HEXO.MENU_CATEGORY },
-    { icon: 'fas fa-tag', name: locale.COMMON.TAGS, to: '/tag', show: CONFIG_HEXO.MENU_TAG },
-    { icon: 'fas fa-archive', name: locale.NAV.ARCHIVE, to: '/archive', slot: archiveSlot, show: CONFIG_HEXO.MENU_ARCHIVE },
-    { icon: 'fas fa-search', name: locale.NAV.SEARCH, to: '/search', show: CONFIG_HEXO.MENU_SEARCH }
+    { icon: 'fas fa-th', name: locale.COMMON.CATEGORY, to: '/category', show: CONFIG_ANDYSPRO.MENU_CATEGORY },
+    { icon: 'fas fa-tag', name: locale.COMMON.TAGS, to: '/tag', show: CONFIG_ANDYSPRO.MENU_TAG },
+    { icon: 'fas fa-archive', name: locale.NAV.ARCHIVE, to: '/archive', slot: archiveSlot, show: CONFIG_ANDYSPRO.MENU_ARCHIVE },
+    { icon: 'fas fa-search', name: locale.NAV.SEARCH, to: '/search', show: CONFIG_ANDYSPRO.MENU_SEARCH }
   ]
   if (customNav) {
     links = links.concat(customNav)

@@ -1,5 +1,5 @@
 import React from 'react'
-import CONFIG_HEXO from '../config_hexo'
+import CONFIG_ANDYSPRO from '../config_andyspro'
 
 /**
  * 跳转到评论区
@@ -7,7 +7,7 @@ import CONFIG_HEXO from '../config_hexo'
  * @constructor
  */
 const JumpToCommentButton = () => {
-  if (!CONFIG_HEXO.WIDGET_TO_COMMENT) {
+  if (!CONFIG_ANDYSPRO.WIDGET_TO_COMMENT) {
     return <></>
   }
   function navToComment () {

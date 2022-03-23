@@ -4,10 +4,10 @@ import Link from 'next/link'
 import React from 'react'
 import { Code, Collection, CollectionRow, Equation, NotionRenderer } from 'react-notion-x'
 import TagItemMini from './TagItemMini'
-import CONFIG_HEXO from '../config_hexo'
+import CONFIG_ANDYSPRO from '../config_andyspro'
 
 const BlogPostCard = ({ post, showSummary }) => {
-  const showPreview = CONFIG_HEXO.POST_LIST_PREVIEW && post.blockMap
+  const showPreview = CONFIG_ANDYSPRO.POST_LIST_PREVIEW && post.blockMap
   return (
     <div className='w-full shadow hover:shadow-2xl border border-gray-100 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-800 duration-300'>
       <div key={post.id} className='animate__animated animate__fadeIn flex flex-col-reverse lg:flex-row justify-between duration-300'>
@@ -56,7 +56,7 @@ const BlogPostCard = ({ post, showSummary }) => {
 
       </div>
 
-      {CONFIG_HEXO.POST_LIST_COVER && !showPreview && post?.page_cover && (
+      {CONFIG_ANDYSPRO.POST_LIST_COVER && !showPreview && post?.page_cover && (
         <Link href={`${BLOG.PATH}/article/${post.slug}`} passHref>
         <a className='w-full relative duration-200 rounded-t-xl lg:rounded-r-xl lg:rounded-t-none cursor-pointer transform overflow-hidden'>
           {/* eslint-disable-next-line @next/next/no-img-element */}

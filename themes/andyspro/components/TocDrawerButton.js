@@ -1,6 +1,6 @@
 import { useGlobal } from '@/lib/global'
 import React from 'react'
-import CONFIG_HEXO from '../config_hexo'
+import CONFIG_ANDYSPRO from '../config_andyspro'
 
 /**
  * 点击召唤目录抽屉
@@ -10,7 +10,7 @@ import CONFIG_HEXO from '../config_hexo'
  * @constructor
  */
 const TocDrawerButton = (props) => {
-  if (!CONFIG_HEXO.WIDGET_TOC) {
+  if (!CONFIG_ANDYSPRO.WIDGET_TOC) {
     return <></>
   }
   const { locale } = useGlobal()

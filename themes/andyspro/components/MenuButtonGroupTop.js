@@ -1,17 +1,17 @@
 import React from 'react'
 import Link from 'next/link'
 import { useGlobal } from '@/lib/global'
-import CONFIG_HEXO from '../config_hexo'
+import CONFIG_ANDYSPRO from '../config_andyspro'
 
 const MenuButtonGroupTop = (props) => {
   const { customNav } = props
   const { locale } = useGlobal()
 
   let links = [
-    { icon: 'fas fa-search', name: locale.NAV.SEARCH, to: '/search', show: CONFIG_HEXO.MENU_SEARCH },
-    { icon: 'fas fa-archive', name: locale.COMMON.ARTICLE, to: '/archive', show: CONFIG_HEXO.MENU_ARCHIVE },
-    { icon: 'fas fa-folder', name: locale.COMMON.CATEGORY, to: '/category', show: CONFIG_HEXO.MENU_CATEGORY },
-    { icon: 'fas fa-tag', name: locale.COMMON.TAGS, to: '/tag', show: CONFIG_HEXO.MENU_TAG }
+    { icon: 'fas fa-search', name: locale.NAV.SEARCH, to: '/search', show: CONFIG_ANDYSPRO.MENU_SEARCH },
+    { icon: 'fas fa-archive', name: locale.COMMON.ARTICLE, to: '/archive', show: CONFIG_ANDYSPRO.MENU_ARCHIVE },
+    { icon: 'fas fa-folder', name: locale.COMMON.CATEGORY, to: '/category', show: CONFIG_ANDYSPRO.MENU_CATEGORY },
+    { icon: 'fas fa-tag', name: locale.COMMON.TAGS, to: '/tag', show: CONFIG_ANDYSPRO.MENU_TAG }
   ]
 
   if (customNav) {

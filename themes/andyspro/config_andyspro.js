@@ -1,6 +1,6 @@
-const CONFIG_HEXO = {
+const CONFIG_ANDYSPRO = {
   HOME_BANNER_ENABLE: true,
-  HOME_BANNER_GREETINGS: ['Hi，我是一个程序员', 'Hi，我是一个打工人', 'Hi，我是一个干饭人', '欢迎来到我的博客🎉'], // 首页大图标语文字
+  HOME_BANNER_GREETINGS: ['Hi，我是一個工程師！', 'Hi，我喜歡寫 React！','Hi，我喜歡寫 TypeScript！', 'Hi，我喜歡 Apple 產品！', 'Hi，我是一位運動員', 'Hi，我喜歡軟式網球', '歡迎來到我的 Blog🎉'], // 首頁大圖標語文字
   HOME_BANNER_IMAGE: './bg_image.jpg', // see /public/bg_image.jpg
 
   // 菜单配置
@@ -25,4 +25,4 @@ const CONFIG_HEXO = {
   WIDGET_DARK_MODE: true, // 夜间模式
   WIDGET_TOC: true // 移动端悬浮目录
 }
-export default CONFIG_HEXO
+export default CONFIG_ANDYSPRO

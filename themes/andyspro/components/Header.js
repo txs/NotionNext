@@ -2,7 +2,7 @@ import BLOG from '@/blog.config'
 import { useGlobal } from '@/lib/global'
 import { useEffect, useState } from 'react'
 import Typed from 'typed.js'
-import CONFIG_HEXO from '../config_hexo'
+import CONFIG_ANDYSPRO from '../config_andyspro'
 
 let wrapperTop = 0
 let windowTop = 0
@@ -23,7 +23,7 @@ export default function Header () {
     if (!typed && window && document.getElementById('typed')) {
       changeType(
         new Typed('#typed', {
-          strings: CONFIG_HEXO.HOME_BANNER_GREETINGS,
+          strings: CONFIG_ANDYSPRO.HOME_BANNER_GREETINGS,
           typeSpeed: 200,
           backSpeed: 100,
           backDelay: 400,
@@ -102,7 +102,7 @@ export default function Header () {
       className="duration-500 md:bg-fixed w-full bg-cover bg-center h-screen bg-black text-white"
       style={{
         backgroundImage:
-          `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0,0,0,0.2), rgba(0, 0, 0, 0.8) ),url("${CONFIG_HEXO.HOME_BANNER_IMAGE}")`
+          `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0,0,0,0.2), rgba(0, 0, 0, 0.8) ),url("${CONFIG_ANDYSPRO.HOME_BANNER_IMAGE}")`
       }}
     >
       <div className="absolute flex flex-col h-full items-center justify-center w-full font-sans">

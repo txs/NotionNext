@@ -1,11 +1,11 @@
 import Link from 'next/link'
 import { useGlobal } from '@/lib/global'
 import formatDate from '@/lib/formatDate'
-import CONFIG_HEXO from '../config_hexo'
+import CONFIG_ANDYSPRO from '../config_andyspro'
 import { useEffect } from 'react'
 
 export default function HeaderArticle ({ post }) {
-  const headerImage = post?.page_cover ? `url("${post.page_cover}")` : `url("/${CONFIG_HEXO.HOME_BANNER_IMAGE}")`
+  const headerImage = post?.page_cover ? `url("${post.page_cover}")` : `url("/${CONFIG_ANDYSPRO.HOME_BANNER_IMAGE}")`
 
   const { locale } = useGlobal()
   const date = formatDate(

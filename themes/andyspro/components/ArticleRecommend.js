@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import CONFIG_HEXO from '../config_hexo'
+import CONFIG_ANDYSPRO from '../config_andyspro'
 import BLOG from '@/blog.config'
 import { useGlobal } from '@/lib/global'
 
@@ -9,7 +9,7 @@ import { useGlobal } from '@/lib/global'
  * @returns
  */
 export default function ArticleRecommend ({ recommendPosts }) {
-  if (!CONFIG_HEXO.ARTICLE_RECOMMEND || !recommendPosts || recommendPosts.length === 0) {
+  if (!CONFIG_ANDYSPRO.ARTICLE_RECOMMEND || !recommendPosts || recommendPosts.length === 0) {
     return <></>
   }
   const { locale } = useGlobal()
@@ -25,7 +25,7 @@ export default function ArticleRecommend ({ recommendPosts }) {
         {recommendPosts.map(post => {
           const headerImage = post?.page_cover
             ? `url("${post.page_cover}")`
-            : `url("/${CONFIG_HEXO.HOME_BANNER_IMAGE}")`
+            : `url("/${CONFIG_ANDYSPRO.HOME_BANNER_IMAGE}")`
 
           return (
             <Link key={post.id} title={post.title} href={`${BLOG.PATH}/article/${post.slug}`} passHref>

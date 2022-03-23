@@ -4,7 +4,7 @@ import BlogPostListEmpty from './BlogPostListEmpty'
 import { useGlobal } from '@/lib/global'
 import throttle from 'lodash.throttle'
 import React, { useCallback, useEffect, useRef, useState } from 'react'
-import CONFIG_HEXO from '../config_hexo'
+import CONFIG_ANDYSPRO from '../config_andyspro'
 
 /**
  * 博客列表滚动分页
@@ -13,7 +13,7 @@ import CONFIG_HEXO from '../config_hexo'
  * @returns {JSX.Element}
  * @constructor
  */
-const BlogPostListScroll = ({ posts = [], currentSearch, showSummary = CONFIG_HEXO.POST_LIST_SUMMARY }) => {
+const BlogPostListScroll = ({ posts = [], currentSearch, showSummary = CONFIG_ANDYSPRO.POST_LIST_SUMMARY }) => {
   const postsPerPage = BLOG.POSTS_PER_PAGE
   const [page, updatePage] = useState(1)
   const postsToShow = getPostByPage(page, posts, postsPerPage)

@@ -1,9 +1,9 @@
 import { useGlobal } from '@/lib/global'
 import { saveDarkModeToCookies } from '@/lib/theme'
-import CONFIG_HEXO from '../config_hexo'
+import CONFIG_ANDYSPRO from '../config_andyspro'
 
 export default function FloatDarkModeButton () {
-  if (!CONFIG_HEXO.WIDGET_DARK_MODE) {
+  if (!CONFIG_ANDYSPRO.WIDGET_DARK_MODE) {
     return <></>
   }
 
