@@ -1,22 +1,22 @@
 // 注: process.env.XX是Vercel的环境变量，配置方式见：https://docs.tangly1024.com/zh/features/personality
 const BLOG = {
-  TITLE: process.env.NEXT_PUBLIC_TITLE || 'NotionNext BLOG', // 站点标题
-  DESCRIPTION: process.env.NEXT_PUBLIC_DESCRIPTION || '这是一个由NotionNext生成的站点', // 站点描述
-  AUTHOR: 'tangly1024', // 作者
-  BIO: '一个普通的干饭人🍚', // 作者简介
-  LINK: 'https://tangly1024.com', // 网站地址
+  TITLE: process.env.NEXT_PUBLIC_TITLE || 'Andy\'s Pro 部落格', // 站点标题
+  DESCRIPTION: process.env.NEXT_PUBLIC_DESCRIPTION || '歡迎來到 Andys.pro! 在這裡與 YouTube, 我分享 Apple iPhone, MacBook 產品心得, Javascript 開發,以及軟式網球的技巧!', // 站点描述
+  AUTHOR: 'andyspro', // 作者
+  BIO: '喜歡 Apple 產品, Javascript 與軟式網球的工程師', // 作者简介
+  LINK: 'https://tw.andys.pro', // 网站地址
   AVATAR: '/avatar.png', // 个人头像 默认取public目录下的avatar.png
-  KEYWORDS: 'Notion, 博客', // 网站关键词 英文逗号隔开
-  NOTION_PAGE_ID: process.env.NOTION_PAGE_ID || '02ab3b8678004aa69e9e415905ef32a5', // Important page_id！！！Duplicate Template from  https://www.notion.so/tanghh/02ab3b8678004aa69e9e415905ef32a5
+  KEYWORDS: 'YouTube, Notion, 部落格, Apple, 蘋果, iPhone, iPad, MacBook, Apple Watch, AirPods, Javascript, React, React Native, Soft Tennis, 軟式網球', // 网站关键词 英文逗号隔开
+  NOTION_PAGE_ID: process.env.NOTION_PAGE_ID || 'bb0bc25d3a55439abd6a885d7557bcae', // Important page_id！！！Duplicate Template from  https://www.notion.so/tanghh/02ab3b8678004aa69e9e415905ef32a5
   NOTION_ACCESS_TOKEN: process.env.NOTION_ACCESS_TOKEN || '', // Useful if you prefer not to make your database public
   DEBUG: process.env.NEXT_PUBLIC_DEBUG || false, // 是否显示调试按钮
 
   THEME: process.env.NEXT_PUBLIC_THEME || 'next', // 主题， 支持 ['next','hexo',"fukasawa','medium']
   THEME_SWITCH: process.env.NEXT_PUBLIC_THEME_SWITCH || false, // 是否显示切换主题按钮
-  LANG: 'zh-CN', // e.g 'zh-CN','en-US'  see /lib/lang.js for more.
+  LANG: 'zh-TW', // e.g 'zh-CN','en-US'  see /lib/lang.js for more.
   SINCE: 2021, // e.g if leave this empty, current year will be used.
   BEI_AN: process.env.NEXT_PUBLIC_BEI_AN || '', // 备案号 闽ICP备XXXXXXX
-  APPEARANCE: 'light', // ['light', 'dark', 'auto'], // light 日间模式 ， dark夜间模式， auto根据时间和主题自动夜间模式
+  APPEARANCE: 'auto', // ['light', 'dark', 'auto'], // light 日间模式 ， dark夜间模式， auto根据时间和主题自动夜间模式
   FONT: 'font-serif tracking-wider subpixel-antialiased', // 文章字体 ['font-sans', 'font-serif', 'font-mono'] @see https://www.tailwindcss.cn/docs/font-family
   FONT_AWESOME_PATH: 'https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.4/css/all.min.css', // 图标库CDN ，国内推荐BootCDN，国外推荐 CloudFlare https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css
   BACKGROUND_LIGHT: '#eeeeee', // use hex value, don't forget '#' e.g #fffefc
@@ -34,10 +34,10 @@ const BLOG = {
   PREVIEW_TAG_COUNT: 16, // 首页最多展示的标签数量，0为不限制
 
   // 社交链接，不需要可留空白，例如 CONTACT_WEIBO:''
-  CONTACT_EMAIL: 'tlyong1992@hotmail.com',
+  CONTACT_EMAIL: 'andytv08@gmail.com',
   CONTACT_WEIBO: '',
   CONTACT_TWITTER: '',
-  CONTACT_GITHUB: 'https://github.com/tangly1024',
+  CONTACT_GITHUB: 'https://github.com/txs',
   CONTACT_TELEGRAM: '',
 
   // 悬浮挂件
