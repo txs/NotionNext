@@ -38,10 +38,10 @@ export default function ArticleDetail (props) {
   })
 
   return (<div id="container" className="max-w-5xl overflow-x-auto flex-grow mx-auto md:w-full md:px-5 ">
-    <article itemScope itemType="https://schema.org/Movie" className="subpixel-antialiased bg-white dark:bg-gray-800" >
+    <article itemScope itemType="https://schema.org/Movie" className="subpixel-antialiased bg-white dark:bg-gray-800 sm:pt-1 md:pt-0" >
 
       {/* Notion文章主体 */}
-      <section id='notion-article' className='px-5'>
+      <section id='notion-article' className='px-2'>
         {post.blockMap && (
           <NotionRenderer
             recordMap={post.blockMap}

@@ -102,7 +102,7 @@ export default function Header () {
       className="duration-500 md:bg-fixed w-full bg-cover bg-center h-screen bg-black text-white"
       style={{
         backgroundImage:
-          `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0,0,0,0.2), rgba(0, 0, 0, 0.8) ),url("${CONFIG_ANDYSPRO.HOME_BANNER_IMAGE}")`
+          `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0,0,0,0), rgba(0, 0, 0, 0.5) ),url("${CONFIG_ANDYSPRO.HOME_BANNER_IMAGE}")`
       }}
     >
       <div className="absolute flex flex-col h-full items-center justify-center w-full font-sans">

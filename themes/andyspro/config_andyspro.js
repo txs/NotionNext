@@ -1,6 +1,6 @@
 const CONFIG_ANDYSPRO = {
   HOME_BANNER_ENABLE: true,
-  HOME_BANNER_GREETINGS: ['Hi，我是一個工程師！', 'Hi，我喜歡寫 React！','Hi，我喜歡寫 TypeScript！', 'Hi，我喜歡 Apple 產品！', 'Hi，我是一位運動員', 'Hi，我喜歡軟式網球', '歡迎來到我的 Blog🎉'], // 首頁大圖標語文字
+  HOME_BANNER_GREETINGS: ['Hi，我是一個工程師！', 'Hi，我喜歡寫 React！','Hi，我喜歡寫 TypeScript！', 'Hi，我喜歡 Apple 產品！', 'Hi，我是一位運動員', 'Hi，我喜歡軟式網球', '歡迎來到我的 Blog🎉', '歡迎觀看我的 YouTube ❤️'], // 首頁大圖標語文字
   HOME_BANNER_IMAGE: './bg_image.jpg', // see /public/bg_image.jpg
 
   // 菜单配置
