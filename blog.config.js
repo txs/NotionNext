@@ -1,8 +1,8 @@
 // 注: process.env.XX是Vercel的环境变量，配置方式见：https://docs.tangly1024.com/zh/features/personality
 const BLOG = {
-  TITLE: process.env.NEXT_PUBLIC_TITLE || 'Andy\'s Pro 部落格', // 站点标题
+  TITLE: process.env.NEXT_PUBLIC_TITLE || 'Andy\'s Pro Blog', // 站点标题
   DESCRIPTION: process.env.NEXT_PUBLIC_DESCRIPTION || '歡迎來到 Andys.pro! 在這裡與 YouTube, 我分享 Apple iPhone, MacBook 產品心得, Javascript 開發,以及軟式網球的技巧!', // 站点描述
-  AUTHOR: 'andyspro', // 作者
+  AUTHOR: 'Andy', // 作者
   BIO: '喜歡 Apple 產品, Javascript 與軟式網球的工程師', // 作者简介
   LINK: 'https://tw.andys.pro', // 网站地址
   AVATAR: '/avatar.png', // 个人头像 默认取public目录下的avatar.png
@@ -11,10 +11,10 @@ const BLOG = {
   NOTION_ACCESS_TOKEN: process.env.NOTION_ACCESS_TOKEN || '', // Useful if you prefer not to make your database public
   DEBUG: process.env.NEXT_PUBLIC_DEBUG || false, // 是否显示调试按钮
 
-  THEME: process.env.NEXT_PUBLIC_THEME || 'next', // 主题， 支持 ['next','hexo',"fukasawa','medium']
+  THEME: process.env.NEXT_PUBLIC_THEME || 'andyspro', // 主题， 支持 ['next','hexo',"fukasawa','medium', 'andyspro']
   THEME_SWITCH: process.env.NEXT_PUBLIC_THEME_SWITCH || false, // 是否显示切换主题按钮
   LANG: 'zh-TW', // e.g 'zh-CN','en-US'  see /lib/lang.js for more.
-  SINCE: 2021, // e.g if leave this empty, current year will be used.
+  SINCE: 2020, // e.g if leave this empty, current year will be used.
   BEI_AN: process.env.NEXT_PUBLIC_BEI_AN || '', // 备案号 闽ICP备XXXXXXX
   APPEARANCE: 'auto', // ['light', 'dark', 'auto'], // light 日间模式 ， dark夜间模式， auto根据时间和主题自动夜间模式
   FONT: 'font-serif tracking-wider subpixel-antialiased', // 文章字体 ['font-sans', 'font-serif', 'font-mono'] @see https://www.tailwindcss.cn/docs/font-family
