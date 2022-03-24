@@ -36,7 +36,7 @@ const BLOG = {
   // 社交链接，不需要可留空白，例如 CONTACT_WEIBO:''
   CONTACT_EMAIL: 'andytv08@gmail.com',
   CONTACT_WEIBO: '',
-  CONTACT_TWITTER: '',
+  CONTACT_TWITTER: 'txshon',
   CONTACT_GITHUB: 'https://github.com/txs',
   CONTACT_TELEGRAM: '',
 
