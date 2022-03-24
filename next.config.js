@@ -3,7 +3,7 @@ module.exports = {
     webpack5: true
   },
   images: {
-    domains: ['gravatar.com', 'www.notion.so', 'avatars.githubusercontent.com']
+    domains: ['gravatar.com', 'www.notion.so', 'avatars.githubusercontent.com', 'images.unsplash.com']
   },
   async headers () {
     return [
