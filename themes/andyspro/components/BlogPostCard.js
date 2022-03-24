@@ -9,7 +9,7 @@ import CONFIG_ANDYSPRO from '../config_andyspro'
 const BlogPostCard = ({ post, showSummary }) => {
   const showPreview = CONFIG_ANDYSPRO.POST_LIST_PREVIEW && post.blockMap
   return (
-    <div className='w-full shadow hover:shadow-2xl border border-gray-100 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-800 duration-300'>
+    <div className='w-full shadow hover:scale-110 hover:shadow-2xl border border-gray-100 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-800 transform duration-300'>
       <div key={post.id} className='animate__animated animate__fadeIn flex flex-col-reverse lg:flex-row justify-between duration-300'>
 
       <div className='lg:p-8 p-4 flex flex-col w-full'>
@@ -58,10 +58,10 @@ const BlogPostCard = ({ post, showSummary }) => {
 
       {CONFIG_ANDYSPRO.POST_LIST_COVER && !showPreview && post?.page_cover && (
         <Link href={`${BLOG.PATH}/article/${post.slug}`} passHref>
-        <a className='w-full relative duration-200 rounded-t-xl lg:rounded-r-xl lg:rounded-t-none cursor-pointer transform overflow-hidden'>
+        <a className='hover:scale-110 w-full relative duration-200 rounded-xl cursor-pointer transform overflow-hidden'>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           {/* <img src={post?.page_cover} alt={post.title} className='h-full object-cover'></img> */}
-          <Image className='hover:scale-125 rounded-t-xl lg:rounded-r-xl lg:rounded-t-none transform duration-500' src={post?.page_cover} alt={post.title} layout='fill' objectFit='cover' loading='lazy' />
+          <Image className='rounded-xl  transform duration-500' src={post?.page_cover} alt={post.title} layout='fill' objectFit='cover' loading='lazy' />
         </a>
       </Link>
       )}
