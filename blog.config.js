@@ -1,7 +1,7 @@
 // 注: process.env.XX是Vercel的环境变量，配置方式见：https://docs.tangly1024.com/zh/features/personality
 const BLOG = {
   TITLE: process.env.NEXT_PUBLIC_TITLE || 'Andy\'s Pro Blog', // 站点标题
-  DESCRIPTION: process.env.NEXT_PUBLIC_DESCRIPTION || '歡迎來到 Andys.pro! 在這裡與 YouTube, 我分享 Apple iPhone, MacBook 產品心得, Javascript 開發,以及軟式網球的技巧!', // 站点描述
+  DESCRIPTION: process.env.NEXT_PUBLIC_DESCRIPTION || '歡迎來到 Andys.pro!在這裡與 YouTube, 我分享 Apple iPhone, MacBook 產品心得, Javascript 開發,以及軟式網球的技巧!', // 站点描述
   AUTHOR: 'Andy', // 作者
   BIO: '喜歡 Apple 產品, Javascript 與軟式網球的工程師', // 作者简介
   LINK: 'https://tw.andys.pro', // 网站地址
