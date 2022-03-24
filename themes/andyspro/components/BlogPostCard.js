@@ -61,7 +61,7 @@ const BlogPostCard = ({ post, showSummary }) => {
         <a className='hover:scale-110 w-full relative duration-200 rounded-xl cursor-pointer transform overflow-hidden'>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           {/* <img src={post?.page_cover} alt={post.title} className='h-full object-cover'></img> */}
-          <Image className='rounded-xl  transform duration-500' src={post?.page_cover} alt={post.title} layout='fill' objectFit='cover' loading='lazy' />
+          <Image className='rounded-xl transform duration-500' src={post?.page_cover} alt={post.title} layout='fill' objectFit='cover' loading='lazy' />
         </a>
       </Link>
       )}
