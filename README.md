@@ -16,10 +16,9 @@
 - [ ] 美化標題
 - [ ] 簡繁切換
 - [ ] Site icon
-- [ ] 
+- [ ] line clamp for description @tailwindcss/line-clamp
 
-
-一个使用 NextJS + Notion API 实现的，部署在 Vercel 上的静态博客系统。为Notion和所有创作者设计。
+一个使用 NextJS + Notion API 实现的，部署在 Vercel 上的静态博客系统。为 Notion 和所有创作者设计。
 
 <p>
   <a aria-label="GitHub commit activity" href="https://github.com/tangly1024/NotionNext/commits/main" title="GitHub commit activity">
@@ -38,7 +37,7 @@
 
 演示地址：[https://preview.tangly1024.com/](https://preview.tangly1024.com/)
 
-## 继承自Nobelium的亮点 ✨ 
+## 继承自 Nobelium 的亮点 ✨
 
 **🚀 &nbsp;秒开，设备全适配**
 
@@ -55,25 +54,26 @@
 - 评论、搜索、标签、分类
 - 订阅、网站统计
 - 本地化多语言
-- 服务端渲染、优秀的SEO
+- 服务端渲染、优秀的 SEO
 
 **🎨 &nbsp;美观，轻松自定义**
+
 - 丰富的配置项，更支持多语言
 - 使用 Tailwind CSS，轻松实现二次开发
 
 ## 特色
+
 - 支持更多的页面，功能，更多特性、欢迎移步[我的博客](https://tangly1024.com/article/notion-next)查看
 - 支持多主题切换
 
-| Next | Medium | Hexo | Fukasawa |
-|--|--|--|--|
-| <img src='./docs/theme-next.png' width='300'/> [预览NEXT](https://preview.tangly1024.com/?theme=next)  | <img src='./docs/theme-medium.png' width='300'/> [预览MEDIUM](https://preview.tangly1024.com/?theme=medium) | <img src='./docs/theme-hexo.png' width='300'/> [预览HEXO](https://preview.tangly1024.com/?theme=hexo) | <img src='./docs/theme-fukasawa.png' width='300'/> [预览FUKASAWA](https://preview.tangly1024.com/?theme=fukasawa) |
+| Next                                                                                                   | Medium                                                                                                       | Hexo                                                                                                   | Fukasawa                                                                                                           |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| <img src='./docs/theme-next.png' width='300'/> [预览 NEXT](https://preview.tangly1024.com/?theme=next) | <img src='./docs/theme-medium.png' width='300'/> [预览 MEDIUM](https://preview.tangly1024.com/?theme=medium) | <img src='./docs/theme-hexo.png' width='300'/> [预览 HEXO](https://preview.tangly1024.com/?theme=hexo) | <img src='./docs/theme-fukasawa.png' width='300'/> [预览 FUKASAWA](https://preview.tangly1024.com/?theme=fukasawa) |
 
-
-
-*只需修改`blog.config.js`文件的`THEME`即可实现主题切换。*
+_只需修改`blog.config.js`文件的`THEME`即可实现主题切换。_
 
 ## 更新日志
+
 请移步 [更新文档](https://docs.tangly1024.com/zh/changelog)查看
 
 ## 快速起步
@@ -84,21 +84,25 @@
 - _(可选)_ 用自己的图片替换 `/public` 文件夹里的 `avatar.jpg`、`favicon.svg` 和 `favicon.ico`
 - 在 `blog.config.js` 配置相关选项，`NOTION_PAGE_ID`: 你刚刚分享出去的 Notion 页面网址中的页面 ID，通常是网址中工作区地址后的 32 位字符串
 
-
 部署方式一：
-- 点击 [Vercel一键开始](https://vercel.com/new/clone?demo-description=Notion%20powered%20site%20Built%20with%20Next.js.&demo-image=https%3A%2F%2Fdocs.tangly1024.com%2Ftheme-medium.png&demo-title=Notion%20Next%20Blog&demo-url=https%3A%2F%2Fblog.tangly1024.com%2F&project-name=notion-next-blog&repository-name=NotionNext&s=https%3A%2F%2Fgithub.com%2Ftangly1024%2FNotionNext) 部署该项目
-  
+
+- 点击 [Vercel 一键开始](https://vercel.com/new/clone?demo-description=Notion%20powered%20site%20Built%20with%20Next.js.&demo-image=https%3A%2F%2Fdocs.tangly1024.com%2Ftheme-medium.png&demo-title=Notion%20Next%20Blog&demo-url=https%3A%2F%2Fblog.tangly1024.com%2F&project-name=notion-next-blog&repository-name=NotionNext&s=https%3A%2F%2Fgithub.com%2Ftangly1024%2FNotionNext) 部署该项目
+
 部署方式二：
-- 通过Docker部署
+
+- 通过 Docker 部署
+
 ```bash
 docker run -p 3000:3000 -e NOTION_PAGE_ID="你的Notion_Page_ID" tangly1024/notionnext:2.8.1
 ```
 
 - **稍微等等就可以访问了！** 简单吗?
-- 更多项目特性及配置的说明，请移步 [NotionNext文档](https://docs.tangly1024.com/zh) 查看，文档正在完善中,欢迎 [参与编辑](https://github.com/tangly1024/nextjs-docs-notion-next)
+- 更多项目特性及配置的说明，请移步 [NotionNext 文档](https://docs.tangly1024.com/zh) 查看，文档正在完善中,欢迎 [参与编辑](https://github.com/tangly1024/nextjs-docs-notion-next)
 
 ## 快速开发
-- 需要安装Nodejs环境
+
+- 需要安装 Nodejs 环境
+
 ```bash
 yarn # 安装依赖
 yarn run dev # 本地开发
@@ -115,7 +119,9 @@ yarn run start # 本地启动NextJS服务
 - **图标**：[fontawesome](https://fontawesome.com/v5.15/icons?d=gallery)
 
 ## 致谢
-感谢Craig Hart发起的Nobelium项目
+
+感谢 Craig Hart 发起的 Nobelium 项目
+
 <table><tr align="left">
   <td align="center"><a href="https://github.com/craigary" title="Craig Hart"><img src="https://avatars.githubusercontent.com/u/10571717" width="64px;"alt="Craig Hart"/></a><br/><a href="https://notion.so/cnotion" title="Craig Hart">Craig Hart</a></td>
 </tr></table>
