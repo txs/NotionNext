@@ -1,4 +1,13 @@
-# NotionNext
+# tw.andys.pro Blog
+
+## TODO
+
+- [x] Google Analytics 2022/03/25
+- [ ] 留言系統
+- [ ] Change footer
+- [ ] Add cover to the article list in mobile
+- [ ] Fix facebook link info head metatdata
+
 
 一个使用 NextJS + Notion API 实现的，部署在 Vercel 上的静态博客系统。为Notion和所有创作者设计。
 
