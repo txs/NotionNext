@@ -51,7 +51,7 @@ const LayoutBase = (props) => {
 
     {headerSlot}
 
-    <main id='wrapper' className='w-full py-0 min-h-screen'>
+    <main id='wrapper' className='w-full py-20 min-h-screen'>
 
       <div id='container-inner' className='pt-0 w-full mx-auto lg:flex justify-center md:space-x-4'>
         <div className='flex-grow w-full lg:max-w-4xl p-2'>

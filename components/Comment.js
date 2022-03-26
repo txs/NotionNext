@@ -12,6 +12,12 @@ const GitalkComponent = dynamic(
   },
   { ssr: false }
 )
+const GiscusComponent = dynamic(
+  () => {
+    return import('@/components/Giscus')
+  },
+  { ssr: false }
+)
 const UtterancesComponent = dynamic(
   () => {
     return import('@/components/Utterances')
@@ -21,7 +27,7 @@ const UtterancesComponent = dynamic(
 
 const Comment = ({ frontMatter }) => {
   const router = useRouter()
-  const { locale } = useGlobal()
+  const { locale, isDarkMode } = useGlobal()
   return (
     <div id='comment' className='comment mt-5 text-gray-800 dark:text-gray-300'>
       <Tabs>
@@ -39,6 +45,10 @@ const Comment = ({ frontMatter }) => {
               distractionFreeMode: JSON.parse(BLOG.COMMENT_GITALK_DISTRACTION_FREE_MODE)
             }}
           />
+        </div>)}
+
+        {BLOG.COMMENT_GISCUS_REPO && (<div key='Giscus'>
+          <GiscusComponent mapping={frontMatter.id} term={frontMatter.title} isDarkMode={isDarkMode} className='px-2' />
         </div>)}
 
         {BLOG.COMMENT_UTTERRANCES_REPO && (<div key='Utterance'>

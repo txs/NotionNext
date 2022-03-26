@@ -43,7 +43,7 @@ export default function HeaderArticle ({ post }) {
         ></div>
         <div
           id='title'
-          className='w-full relative'
+          className='w-full relative -mb-20'
         >
           <header className="animate__animated bg-opacity-70 relative top-0 w-full px-10 flex justify-center items-start font-sans">
             <div className='mt-2'>

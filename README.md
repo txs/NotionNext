@@ -3,10 +3,20 @@
 ## TODO
 
 - [x] Google Analytics 2022/03/25
-- [ ] 留言系統
+- [x] cusdis 留言系統 2022/03/25
+- [x] giscus 留言系統插件 2022/03/26
+- [x] giscus 留言系統插件黑白切換 2022/03/26
+- [x] giscus 留言系統設定 2022/03/26
 - [ ] Change footer
 - [ ] Add cover to the article list in mobile
 - [ ] Fix facebook link info head metatdata
+- [ ] PWA
+- [ ] 字數統計
+- [ ] 字體
+- [ ] 美化標題
+- [ ] 簡繁切換
+- [ ] Site icon
+- [ ] 
 
 
 一个使用 NextJS + Notion API 实现的，部署在 Vercel 上的静态博客系统。为Notion和所有创作者设计。
