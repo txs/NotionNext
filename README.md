@@ -7,8 +7,11 @@
 - [x] giscus 留言系統插件 2022/03/26
 - [x] giscus 留言系統插件黑白切換 2022/03/26
 - [x] giscus 留言系統設定 2022/03/26
-- [x] 字體非新細明體 Remove Serif 2022/03/27
 - [x] line clamp for description @tailwindcss/line-clamp fix BlogPostCard summery 2022/03/26
+- [x] 字體非新細明體 Remove Serif 2022/03/27
+- [x] 相關文章 dark mode 文字黑白問題 2022/03/27
+- [x] ArticleRecommend Image Round corner 2022/03/27
+- [x] ArticleRecommend text margin spacing 2022/03/27
 - [ ] Change footer
 - [ ] Add cover to the article list in mobile
 - [ ] Fix facebook link info head metatdata
