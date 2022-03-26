@@ -13,10 +13,16 @@ import CONFIG_ANDYSPRO from '../config_andyspro'
  * @returns {JSX.Element}
  * @constructor
  */
-const BlogPostListScroll = ({ posts = [], currentSearch, showSummary = CONFIG_ANDYSPRO.POST_LIST_SUMMARY }) => {
+const BlogPostListScroll = ({
+  posts = [],
+  currentSearch,
+  currentTag,
+  showSummary = CONFIG_ANDYSPRO.POST_LIST_SUMMARY
+}) => {
   const postsPerPage = BLOG.POSTS_PER_PAGE
   const [page, updatePage] = useState(1)
   const postsToShow = getPostByPage(page, posts, postsPerPage)
+  console.log(currentTag)
 
   let hasMore = false
   if (posts) {
@@ -30,13 +36,19 @@ const BlogPostListScroll = ({ posts = [], currentSearch, showSummary = CONFIG_AN
   }
 
   // 监听滚动自动分页加载
-  const scrollTrigger = useCallback(throttle(() => {
-    const scrollS = window.scrollY + window.outerHeight
-    const clientHeight = targetRef ? (targetRef.current ? (targetRef.current.clientHeight) : 0) : 0
-    if (scrollS > clientHeight + 100) {
-      handleGetMore()
-    }
-  }, 500))
+  const scrollTrigger = useCallback(
+    throttle(() => {
+      const scrollS = window.scrollY + window.outerHeight
+      const clientHeight = targetRef
+        ? targetRef.current
+          ? targetRef.current.clientHeight
+          : 0
+        : 0
+      if (scrollS > clientHeight + 100) {
+        handleGetMore()
+      }
+    }, 500)
+  )
 
   // 监听滚动
   useEffect(() => {
@@ -52,23 +64,33 @@ const BlogPostListScroll = ({ posts = [], currentSearch, showSummary = CONFIG_AN
   if (!postsToShow || postsToShow.length === 0) {
     return <BlogPostListEmpty currentSearch={currentSearch} />
   } else {
-    return <div id='container' ref={targetRef} className='w-full'>
+    return (
+      <div id="container" ref={targetRef} className="w-full">
+        {/* 文章列表 */}
+        {currentTag && (
+          <div className="flex flex-wrap space-y-1 lg:space-y-4 px-2 py-8 dark:text-white text-4xl">
+            <h1>#{currentTag}</h1>
+          </div>
+        )}
+        <div className="flex flex-wrap space-y-1 lg:space-y-4 px-2">
+          {postsToShow.map(post => (
+            <BlogPostCard key={post.id} post={post} showSummary={showSummary} />
+          ))}
+        </div>
 
-      {/* 文章列表 */}
-      <div className='flex flex-wrap space-y-1 lg:space-y-4 px-2'>
-        {postsToShow.map(post => (
-          <BlogPostCard key={post.id} post={post} showSummary={showSummary}/>
-        ))}
+        <div>
+          <div
+            onClick={() => {
+              handleGetMore()
+            }}
+            className="w-full my-4 py-4 text-center cursor-pointer glassmorphism shadow-xl rounded-xl dark:text-gray-200"
+          >
+            {' '}
+            {hasMore ? locale.COMMON.MORE : `${locale.COMMON.NO_MORE} 😰`}{' '}
+          </div>
+        </div>
       </div>
-
-      <div>
-        <div onClick={() => {
-          handleGetMore()
-        }}
-             className='w-full my-4 py-4 text-center cursor-pointer glassmorphism shadow-xl rounded-xl dark:text-gray-200'
-        > {hasMore ? locale.COMMON.MORE : `${locale.COMMON.NO_MORE} 😰`} </div>
-      </div>
-    </div>
+    )
   }
 }
 
@@ -80,9 +102,6 @@ const BlogPostListScroll = ({ posts = [], currentSearch, showSummary = CONFIG_AN
  * @returns {*}
  */
 const getPostByPage = function (page, totalPosts, postsPerPage) {
-  return totalPosts.slice(
-    0,
-    postsPerPage * page
-  )
+  return totalPosts.slice(0, postsPerPage * page)
 }
 export default BlogPostListScroll

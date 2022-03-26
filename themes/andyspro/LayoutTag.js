@@ -3,7 +3,7 @@ import { useGlobal } from '@/lib/global'
 import BlogPostListScroll from './components/BlogPostListScroll'
 import LayoutBase from './LayoutBase'
 
-export const LayoutTag = (props) => {
+export const LayoutTag = props => {
   const { tags, posts, tag } = props
   const { locale } = useGlobal()
 
@@ -13,7 +13,9 @@ export const LayoutTag = (props) => {
     type: 'website'
   }
 
-  return <LayoutBase {...props} meta={meta}>
-      <BlogPostListScroll posts={posts} tags={tags} currentTag={tag}/>
-   </LayoutBase>
+  return (
+    <LayoutBase {...props} meta={meta}>
+      <BlogPostListScroll posts={posts} tags={tags} currentTag={tag} />
+    </LayoutBase>
+  )
 }

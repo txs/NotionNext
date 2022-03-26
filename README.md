@@ -12,6 +12,9 @@
 - [x] 相關文章 dark mode 文字黑白問題 2022/03/27
 - [x] ArticleRecommend Image Round corner 2022/03/27
 - [x] ArticleRecommend text margin spacing 2022/03/27
+- [x] Site icon 2022/03/27
+- [ ] TagPage Hashtag title
+- [ ] CategoryPage Folder title
 - [ ] Change footer
 - [ ] Add cover to the article list in mobile
 - [ ] Fix facebook link info head metatdata
@@ -19,7 +22,6 @@
 - [ ] 字數統計
 - [ ] 美化標題
 - [ ] 簡繁切換
-- [ ] Site icon
 
 一个使用 NextJS + Notion API 实现的，部署在 Vercel 上的静态博客系统。为 Notion 和所有创作者设计。
 

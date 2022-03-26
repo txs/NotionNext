@@ -17,11 +17,11 @@ import { useGlobal } from '@/lib/global'
  * @returns {JSX.Element}
  * @constructor
  */
-const LayoutBase = (props) => {
+const LayoutBase = props => {
   const { children, headerSlot, floatSlot, meta } = props
   const [show, switchShow] = useState(false)
   // const [percent, changePercent] = useState(0) // 页面阅读百分比
-  const rightAreaSlot = <Live2D/>
+  const rightAreaSlot = <Live2D />
   const { onLoading } = useGlobal()
 
   const scrollListener = () => {
@@ -29,7 +29,7 @@ const LayoutBase = (props) => {
     const clientHeight = targetRef?.clientHeight
     const scrollY = window.pageYOffset
     const fullHeight = clientHeight - window.outerHeight
-    let per = parseFloat(((scrollY / fullHeight * 100)).toFixed(0))
+    let per = parseFloat(((scrollY / fullHeight) * 100).toFixed(0))
     if (per > 100) per = 100
     const shouldShow = scrollY > 100 && per > 0
 
@@ -44,37 +44,44 @@ const LayoutBase = (props) => {
     return () => document.removeEventListener('scroll', scrollListener)
   }, [show])
 
-  return (<div className='bg-white dark:bg-gray-900'>
-    <CommonHead meta={meta} />
+  return (
+    <div className="bg-white dark:bg-gray-900">
+      <CommonHead meta={meta} />
 
-    <TopNav {...props}/>
+      <TopNav {...props} />
 
-    {headerSlot}
+      {headerSlot}
 
-    <main id='wrapper' className='w-full py-20 min-h-screen'>
+      <main id="wrapper" className="w-full md:py-20 min-h-screen">
+        <div
+          id="container-inner"
+          className="pt-0 w-full mx-auto lg:flex justify-center md:space-x-4"
+        >
+          <div className="flex-grow w-full lg:max-w-4xl p-2">
+            {onLoading ? <LoadingCover /> : children}
+          </div>
 
-      <div id='container-inner' className='pt-0 w-full mx-auto lg:flex justify-center md:space-x-4'>
-        <div className='flex-grow w-full lg:max-w-4xl p-2'>
-          {onLoading ? <LoadingCover/> : children}
+          <SideRight {...props} slot={rightAreaSlot} />
         </div>
+      </main>
 
-        <SideRight {...props} slot={rightAreaSlot}/>
-      </div>
-
-    </main>
-
-     {/* 右下角悬浮 */}
-     <div className='bottom-12 right-1 fixed justify-end z-20 font-sans text-white bg-blue-400 rounded'>
-        <div className={(show ? 'animate__animated ' : 'hidden') + ' animate__fadeInUp justify-center duration-300  animate__faster flex flex-col items-center cursor-pointer '}>
-          <FloatDarkModeButton/>
+      {/* 右下角悬浮 */}
+      <div className="bottom-12 right-1 fixed justify-end z-20 font-sans text-white bg-blue-400 rounded">
+        <div
+          className={
+            (show ? 'animate__animated ' : 'hidden') +
+            ' animate__fadeInUp justify-center duration-300  animate__faster flex flex-col items-center cursor-pointer '
+          }
+        >
+          <FloatDarkModeButton />
           {floatSlot}
-          <JumpToTopButton/>
+          <JumpToTopButton />
         </div>
       </div>
 
-    <Footer title={meta.title}/>
-
-  </div>)
+      <Footer title={meta.title} />
+    </div>
+  )
 }
 
 export default LayoutBase
