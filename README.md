@@ -13,8 +13,8 @@
 - [x] ArticleRecommend Image Round corner 2022/03/27
 - [x] ArticleRecommend text margin spacing 2022/03/27
 - [x] Site icon 2022/03/27
-- [ ] TagPage Hashtag title
-- [ ] CategoryPage Folder title
+- [x] TagPage Hashtag title 2022/03/27
+- [x] CategoryPage Folder title 2022/03/27
 - [ ] Change footer
 - [ ] Add cover to the article list in mobile
 - [ ] Fix facebook link info head metatdata
