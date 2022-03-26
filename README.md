@@ -7,16 +7,16 @@
 - [x] giscus 留言系統插件 2022/03/26
 - [x] giscus 留言系統插件黑白切換 2022/03/26
 - [x] giscus 留言系統設定 2022/03/26
+- [x] 字體非新細明體 Remove Serif 2022/03/27
+- [x] line clamp for description @tailwindcss/line-clamp fix BlogPostCard summery 2022/03/26
 - [ ] Change footer
 - [ ] Add cover to the article list in mobile
 - [ ] Fix facebook link info head metatdata
 - [ ] PWA
 - [ ] 字數統計
-- [ ] 字體
 - [ ] 美化標題
 - [ ] 簡繁切換
 - [ ] Site icon
-- [ ] line clamp for description @tailwindcss/line-clamp
 
 一个使用 NextJS + Notion API 实现的，部署在 Vercel 上的静态博客系统。为 Notion 和所有创作者设计。
 
