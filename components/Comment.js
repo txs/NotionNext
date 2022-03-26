@@ -48,7 +48,7 @@ const Comment = ({ frontMatter }) => {
         </div>)}
 
         {BLOG.COMMENT_GISCUS_REPO && (<div key='Giscus'>
-          <GiscusComponent mapping={frontMatter.id} term={frontMatter.title} isDarkMode={isDarkMode} className='px-2' />
+          <GiscusComponent isDarkMode={isDarkMode} className='px-2' />
         </div>)}
 
         {BLOG.COMMENT_UTTERRANCES_REPO && (<div key='Utterance'>
