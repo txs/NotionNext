@@ -1,6 +1,7 @@
 import BLOG from '@/blog.config'
 import BlogPostCard from './BlogPostCard'
 import BlogPostListEmpty from './BlogPostListEmpty'
+import Link from 'next/link'
 import { useGlobal } from '@/lib/global'
 import throttle from 'lodash.throttle'
 import React, { useCallback, useEffect, useRef, useState } from 'react'
@@ -17,12 +18,12 @@ const BlogPostListScroll = ({
   posts = [],
   currentSearch,
   currentTag,
+  currentCategory,
   showSummary = CONFIG_ANDYSPRO.POST_LIST_SUMMARY
 }) => {
   const postsPerPage = BLOG.POSTS_PER_PAGE
   const [page, updatePage] = useState(1)
   const postsToShow = getPostByPage(page, posts, postsPerPage)
-  console.log(currentTag)
 
   let hasMore = false
   if (posts) {
@@ -66,12 +67,42 @@ const BlogPostListScroll = ({
   } else {
     return (
       <div id="container" ref={targetRef} className="w-full">
-        {/* 文章列表 */}
-        {currentTag && (
-          <div className="flex flex-wrap space-y-1 lg:space-y-4 px-2 py-8 dark:text-white text-4xl">
-            <h1>#{currentTag}</h1>
+        {/* 分類文章標題 */}
+        {currentCategory && (
+          <div className="py-6">
+            <div className="flex flex-wrap space-y-1 lg:space-y-4 p-2 dark:text-white text-4xl">
+              <h1>
+                <i class="fas fa-folder mr-1"></i>
+                &nbsp;
+                {currentCategory}
+              </h1>
+            </div>
+            <div className="flex flex-wrap space-y-1 lg:space-y-4 p-2 dark:text-white">
+              <Link href={`/category/`} passHref>
+                <a className="cursor-pointer font-light text-sm hover:underline transform">
+                  查看所有分類
+                </a>
+              </Link>
+            </div>
           </div>
         )}
+        {/* 標籤文章標題 */}
+        {currentTag && (
+          <div className="py-6">
+            <div className="flex flex-wrap space-y-1 lg:space-y-4 p-2 dark:text-white text-4xl">
+              <h1>#{currentTag}</h1>
+            </div>
+            <div className="flex flex-wrap space-y-1 lg:space-y-4 p-2 dark:text-white">
+              <Link href={`/tag/`} passHref>
+                <a className="cursor-pointer font-light text-sm hover:underline transform">
+                  查看所有標籤
+                </a>
+              </Link>
+            </div>
+          </div>
+        )}
+
+        {/* 文章列表 */}
         <div className="flex flex-wrap space-y-1 lg:space-y-4 px-2">
           {postsToShow.map(post => (
             <BlogPostCard key={post.id} post={post} showSummary={showSummary} />
