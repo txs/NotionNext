@@ -7,7 +7,13 @@ import 'prismjs/components/prism-markup'
 import 'prismjs/components/prism-python'
 import 'prismjs/components/prism-typescript'
 import { useEffect, useRef } from 'react'
-import { Code, Collection, CollectionRow, Equation, NotionRenderer } from 'react-notion-x'
+import {
+  Code,
+  Collection,
+  CollectionRow,
+  Equation,
+  NotionRenderer
+} from 'react-notion-x'
 import ArticleAdjacent from './ArticleAdjacent'
 import ArticleCopyright from './ArticleCopyright'
 import ArticleRecommend from './ArticleRecommend'
@@ -17,13 +23,15 @@ import ArticleRecommend from './ArticleRecommend'
  * @param {*} param0
  * @returns
  */
-export default function ArticleDetail (props) {
+export default function ArticleDetail(props) {
   const { post } = props
-  const zoom = typeof window !== 'undefined' && mediumZoom({
-    container: '.notion-viewport',
-    background: 'rgba(0, 0, 0, 0.2)',
-    margin: getMediumZoomMargin()
-  })
+  const zoom =
+    typeof window !== 'undefined' &&
+    mediumZoom({
+      container: '.notion-viewport',
+      background: 'rgba(0, 0, 0, 0.2)',
+      margin: getMediumZoomMargin()
+    })
   const zoomRef = useRef(zoom ? zoom.clone() : null)
 
   useEffect(() => {
@@ -32,61 +40,70 @@ export default function ArticleDetail (props) {
     const imgList = container?.getElementsByTagName('img')
     if (imgList && zoomRef.current) {
       for (let i = 0; i < imgList.length; i++) {
-        (zoomRef.current).attach(imgList[i])
+        zoomRef.current.attach(imgList[i])
       }
     }
   })
 
-  return (<div id="container" className="max-w-5xl overflow-x-auto flex-grow mx-auto md:w-full md:px-5 ">
-    <article itemScope itemType="https://schema.org/Movie" className="subpixel-antialiased bg-white dark:bg-gray-800 sm:pt-1 md:pt-0" >
+  return (
+    <div
+      id="container"
+      className="max-w-5xl overflow-x-auto flex-grow mx-auto md:w-full md:px-5 "
+    >
+      <article
+        itemScope
+        itemType="https://schema.org/Movie"
+        className="subpixel-antialiased bg-white dark:bg-gray-800 sm:pt-1 md:pt-0"
+      >
+        {/* Notion文章主体 */}
+        <section id="notion-article" className="px-2">
+          {post.blockMap && (
+            <NotionRenderer
+              recordMap={post.blockMap}
+              mapPageUrl={mapPageUrl}
+              components={{
+                equation: Equation,
+                code: Code,
+                collectionRow: CollectionRow,
+                collection: Collection
+              }}
+            />
+          )}
+        </section>
 
-      {/* Notion文章主体 */}
-      <section id='notion-article' className='px-2'>
-        {post.blockMap && (
-          <NotionRenderer
-            recordMap={post.blockMap}
-            mapPageUrl={mapPageUrl}
-            components={{
-              equation: Equation,
-              code: Code,
-              collectionRow: CollectionRow,
-              collection: Collection
-            }}
+        <section className="px-1 py-2 my-1 text-sm font-light overflow-auto text-gray-600  dark:text-gray-400">
+          {/* 文章内嵌广告 */}
+          <ins
+            className="adsbygoogle"
+            style={{ display: 'block', textAlign: 'center' }}
+            data-adtest="on"
+            data-ad-layout="in-article"
+            data-ad-format="fluid"
+            data-ad-client="ca-pub-2708419466378217"
+            data-ad-slot="3806269138"
           />
-        )}
-      </section>
+        </section>
 
-      <section className="px-1 py-2 my-1 text-sm font-light overflow-auto text-gray-600  dark:text-gray-400">
-        {/* 文章内嵌广告 */}
-        <ins className="adsbygoogle"
-          style={{ display: 'block', textAlign: 'center' }}
-          data-adtest="on"
-          data-ad-layout="in-article"
-          data-ad-format="fluid"
-          data-ad-client="ca-pub-2708419466378217"
-          data-ad-slot="3806269138"/>
-      </section>
+        <ArticleCopyright {...props} />
+        <ArticleRecommend {...props} />
+        <ArticleAdjacent {...props} />
+      </article>
 
-      <ArticleCopyright {...props}/>
-      <ArticleRecommend {...props}/>
-      <ArticleAdjacent {...props}/>
+      <hr className="border-dashed" />
 
-    </article>
-
-    <hr className='border-dashed'/>
-
-    {/* 评论互动 */}
-    <div className="duration-200  overflow-x-auto bg-white dark:bg-gray-800 px-3">
-       <Comment frontMatter={post} />
+      {/* 评论互动 */}
+      <div className="duration-200  overflow-x-auto bg-white dark:bg-gray-800 px-3">
+        <Comment frontMatter={post} />
+      </div>
     </div>
-  </div>)
+  )
 }
 
 const mapPageUrl = id => {
   return 'https://www.notion.so/' + id.replace(/-/g, '')
 }
 
-function getMediumZoomMargin () {
+function getMediumZoomMargin() {
   const width = window.innerWidth
 
   if (width < 500) {
