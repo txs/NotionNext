@@ -34,15 +34,22 @@ const BlogPostCard = ({ post, showSummary }) => {
           <div
             className={`flex mt-2 items-center ${
               showPreview ? 'justify-center' : 'justify-start'
-            } flex-wrap dark:text-gray-500 text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 `}
+            } flex-wrap dark:text-gray-500 text-gray-400`}
           >
             <Link
               href={`/archive#${post?.date?.start_date?.substr(0, 7)}`}
               passHref
             >
-              <a className="font-light hover:underline cursor-pointer text-sm leading-4 mr-3">
+              <a className="font-light hover:underline cursor-pointer text-sm leading-4 mr-3 hover:text-blue-500 dark:hover:text-blue-400">
                 <i className="far fa-calendar-alt mr-1" />
                 {post.date.start_date}
+              </a>
+            </Link>
+
+            <Link href={`/category/${post.category}`} passHref>
+              <a className="cursor-pointer font-light text-sm hover:underline transform flex-none pr-4 hover:text-blue-500 dark:hover:text-blue-400">
+                <i className="mr-1 far fa-folder" />
+                {post.category}
               </a>
             </Link>
           </div>
@@ -70,12 +77,6 @@ const BlogPostCard = ({ post, showSummary }) => {
           )}
 
           <div className="text-gray-400 justify-between flex">
-            <Link href={`/category/${post.category}`} passHref>
-              <a className="cursor-pointer font-light text-sm hover:underline transform">
-                <i className="mr-1 far fa-folder" />
-                {post.category}
-              </a>
-            </Link>
             <div className="md:flex-nowrap flex-wrap md:justify-start inline-block">
               <div>
                 {' '}
